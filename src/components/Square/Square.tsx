@@ -1,5 +1,5 @@
-import { Fragment } from "react/jsx-runtime";
-import { SquareContainer, whatColorSquare } from "./Square.styled";
+import { Fragment } from 'react/jsx-runtime'
+import { SquareContainer, whatColorSquare } from './Square.styled'
 
 interface SquareProps {
   background?: whatColorSquare
@@ -8,9 +8,7 @@ interface SquareProps {
 export function Square({ background = 'primary' }: SquareProps) {
   return (
     <Fragment>
-      <SquareContainer background={background}>
-      </SquareContainer>
+      <SquareContainer background={background}></SquareContainer>
     </Fragment>
-
   )
 }

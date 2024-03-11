@@ -1,9 +1,8 @@
-import { Fragment } from "react/jsx-runtime";
-import { ButtonVariants, ButtonContainer } from "./Button.styled";
-
+import { Fragment } from 'react/jsx-runtime'
+import { ButtonVariants, ButtonContainer } from './Button.styled'
 
 interface ButtonProps {
-  variant?: ButtonVariants,
+  variant?: ButtonVariants
 }
 export function Button({ variant = 'primary' }: ButtonProps) {
   return (
