@@ -1,4 +1,4 @@
-import { styled, css } from "styled-components";
+import { styled } from "styled-components";
 
 export type whatColorSquare = 'primary' | 'secondary' | 'danger' | 'success';
 
@@ -6,18 +6,11 @@ interface SquareContainerProps {
   background: whatColorSquare,
 }
 
-const squareColors = {
-  primary: 'purple',
-  secondary: 'orange',
-  danger: 'red',
-  success: 'green',
-}
-
 export const SquareContainer = styled.div<SquareContainerProps>`
-${props => css`
 width: 100px;
 height: 100px;
-background-color: ${squareColors[props.background]};
-`
-  }
+border-radius: 8px;
+border: 1px solid transparent;
+margin: .2rem;
+background-color: ${props => props.theme[props.background]}
 `
