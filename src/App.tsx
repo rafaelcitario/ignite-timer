@@ -2,16 +2,17 @@ import { Fragment } from 'react/jsx-runtime'
 import { ThemeProvider } from 'styled-components'
 import { DefaultTheme } from './styles/themes/default'
 import { GlobalStyle } from './styles/GlobalStyles'
-import { Home } from './components/pages/Home/Home'
-import { History } from './components/pages/History/History'
+import { Router } from './components/routes/Router'
+import { BrowserRouter } from 'react-router-dom'
 
 export function App() {
   return (
     <Fragment>
       <ThemeProvider theme={DefaultTheme}>
         <GlobalStyle />
-        <Home />
-        <History />
+        <BrowserRouter>
+          <Router />
+        </BrowserRouter>
       </ThemeProvider>
     </Fragment>
   )
