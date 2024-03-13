@@ -24,5 +24,6 @@ export const DefaultTheme = {
   'size-18': '1.125rem',
   'size-24': '1.25rem',
 
+  'font-mono': 'Roboto Mono',
   bold: 700,
 }
