@@ -1,8 +1,26 @@
 import { Fragment } from 'react/jsx-runtime'
 import { FormContainer } from './styles'
-import { Play } from '@phosphor-icons/react'
+import { CountdownButton } from '../../components/Button-Countdown'
+import { useState } from 'react'
+
+export interface ContentButtonProps {
+  cronometer: string
+  starter: string
+}
+const content: ContentButtonProps = {
+  cronometer: 'reset cronometer',
+  starter: 'init cronometer',
+}
 
 export const Home = () => {
+  const [buttonContent, setButtonContent] = useState(content.starter)
+
+  function changeContent() {
+    if (buttonContent !== content.cronometer) {
+      return setButtonContent(content.cronometer)
+    }
+    setButtonContent(content.starter)
+  }
   return (
     <Fragment>
       <FormContainer>
@@ -34,10 +52,11 @@ export const Home = () => {
           </div>
 
           <footer>
-            <button>
-              <Play size={24} weight="regular" />
-              cronometrar
-            </button>
+            <CountdownButton
+              content={content}
+              handleChangeContent={changeContent}
+              buttonContent={buttonContent}
+            />
           </footer>
         </form>
       </FormContainer>
