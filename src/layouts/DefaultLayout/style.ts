@@ -10,4 +10,9 @@ export const LayoutCountainer = styled.div`
   gap: 1rem;
   background-color: ${(props) => props.theme['gray-800']};
   border-radius: 8px;
+
+  @media (max-width: 555px) {
+    width: fit-content;
+    height: fit-content;
+  }
 `

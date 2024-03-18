@@ -6,6 +6,15 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   padding: 0 5rem;
 
+  @media (max-width: 700px) {
+    gap: 5rem;
+
+    nav {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
   span {
     color: ${(props) => props.theme['green-300']};
   }

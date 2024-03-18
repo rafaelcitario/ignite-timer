@@ -43,7 +43,7 @@ export const Home = () => {
             <span>minutos</span>
           </header>
 
-          <div>
+          <div className="timerContainer">
             <span className="timer">0</span>
             <span className="timer">0</span>
             <span className="dots">&#58;</span>

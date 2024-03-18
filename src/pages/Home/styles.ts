@@ -36,4 +36,75 @@ export const FormContainer = styled.div`
     color: ${(props) => props.theme['green-500']};
     font-weight: ${(props) => props.theme.bold};
   }
+
+  @media (max-width: 1440px) {
+    header {
+      flex-direction: column;
+      gap: 0.625rem;
+    }
+
+    header input {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .timerContainer {
+      width: 100%;
+      overflow-wrap: break-word;
+    }
+
+    .timerContainer .timer,
+    .timerContainer .dots {
+      height: fit-content;
+      font-size: 5rem;
+      padding: 0.5rem 1.5rem;
+    }
+  }
+
+  @media (max-width: 882px) {
+    header {
+      flex-direction: column;
+      gap: 0.625rem;
+    }
+
+    header input {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .timerContainer {
+      width: 100%;
+      gap: 0rem;
+    }
+
+    .timerContainer .timer,
+    .timerContainer .dots {
+      height: fit-content;
+      font-size: 5rem;
+      gap: 0;
+      padding: 0.5rem 1.5rem;
+    }
+  }
+
+  @media (max-width: 822px) {
+    .timerContainer .timer,
+    .timerContainer .dots {
+      height: fit-content;
+      font-size: 3rem;
+      gap: 0;
+      padding: 0.5rem 1.5rem;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .timerContainer .timer,
+    .timerContainer .dots {
+      height: fit-content;
+      font-size: 1rem;
+      gap: 0;
+      padding: 0.5rem 1rem;
+    }
+  }
 `

@@ -25,4 +25,15 @@ body, input, textarea, button{
   font-size: 1rem;
   
 }
+
+@media (max-width: 555px) {
+    body{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+  }
+
 `
