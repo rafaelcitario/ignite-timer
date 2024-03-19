@@ -27,10 +27,19 @@ export const Home = () => {
         <form action="">
           <header>
             <label htmlFor="nameTask">Vou trabalhar em</label>
+
+            <datalist id="task-suggestions">
+              <option value="task-1" />
+              <option value="task-2" />
+              <option value="task-3" />
+              <option value="banana" />
+            </datalist>
+
             <input
               type="text"
               name="nameTask"
               id="nameTask"
+              list="task-suggestions"
               placeholder="Dê um nome para seu projeto"
             />
             <label htmlFor="timerTask">Durante</label>
@@ -39,6 +48,9 @@ export const Home = () => {
               name="timerTask"
               id="timerTask"
               placeholder="00"
+              step={5}
+              min={5}
+              max={60}
             />
             <span>minutos</span>
           </header>

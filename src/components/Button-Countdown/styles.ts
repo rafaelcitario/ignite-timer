@@ -6,7 +6,7 @@ export const Countdown = styled.button`
   border-radius: 8px;
 
   button {
-    background-color: ${(props) => props.theme['green-300']};
+    background-color: ${(props) => props.theme['green-500']};
     color: ${(props) => props.theme['gray-100']};
     font-size: ${(props) => props.theme['size-16']};
     display: flex;
@@ -18,8 +18,14 @@ export const Countdown = styled.button`
     align-items: center;
     justify-content: center;
 
-    &:hover {
-      background-color: ${(props) => props.theme['green-500']};
+    &:disabled {
+      opacity: 0.7;
+      background-color: ${(props) => props.theme['green-700']};
+      cursor: not-allowed;
+    }
+
+    &:not(:disabled):hover {
+      background-color: ${(props) => props.theme['green-300']};
     }
   }
 `
