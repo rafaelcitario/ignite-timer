@@ -17,6 +17,7 @@ export const FormContainer = styled.div`
     background-color: transparent;
     border: none;
     color: ${(props) => props.theme['gray-400']};
+    text-align: center;
 
     &:focus {
       box-shadow: none;
@@ -25,6 +26,13 @@ export const FormContainer = styled.div`
 
     &::placeholder {
       color: ${(props) => props.theme['gray-500']};
+    }
+  }
+
+  header input[type='text'] {
+    flex: 1;
+    &::-webkit-calendar-picker-indicator {
+      display: none !important;
     }
   }
 
@@ -57,10 +65,6 @@ export const FormContainer = styled.div`
       text-align: center;
       margin: 0;
       padding: 0;
-      flex: 1;
-      &::-webkit-calendar-picker-indicator {
-        display: none !important;
-      }
     }
 
     header input[type='number'] {
